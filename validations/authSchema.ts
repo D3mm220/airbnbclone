@@ -13,3 +13,12 @@ export const registerSchema = yup
   .required();
 
 export type RegisterType = yup.InferType<typeof registerSchema>;
+
+export const LoginSchema = yup
+  .object({
+    email: yup.string().email().required(),
+    password: yup.string().min(6).max(45).required(),
+  })
+  .required();
+
+export type LoginType = yup.InferType<typeof LoginSchema>;
