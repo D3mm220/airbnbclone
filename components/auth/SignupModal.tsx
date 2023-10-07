@@ -20,6 +20,7 @@ import Image from "next/image";
 import { RegisterType, registerSchema } from "@/validations/authSchema";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from "next/navigation";
+import { SocialBtns } from "./SocialBtns";
 
 export const SignupModal = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -132,26 +133,7 @@ export const SignupModal = () => {
                   {" "}
                   -- OR --
                 </h1>
-                <Button variant="outline" className="w-full">
-                  <Image
-                    src="/images/google.png"
-                    height={25}
-                    width={25}
-                    alt="google_logo"
-                    className="mr-5"
-                  />
-                  Continue with Google
-                </Button>
-                <Button variant="outline" className="w-full mt-5">
-                  <Image
-                    src="/images/github.png"
-                    height={25}
-                    width={25}
-                    alt="github_logo"
-                    className="mr-5"
-                  />
-                  Continue with Github
-                </Button>
+                <SocialBtns />
               </form>
             </div>
           </AlertDialogDescription>
