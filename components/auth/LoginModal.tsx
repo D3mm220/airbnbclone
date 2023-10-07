@@ -4,7 +4,6 @@ import {
   AlertDialog,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
@@ -68,6 +67,7 @@ export const LoginModal = () => {
           </AlertDialogTitle>
           <AlertDialogDescription>
             <div>
+              <ToastContainer />
               <form onSubmit={handleSubmit(onSubmit)}>
                 <h1 className="text-lg font-bold">Welcome to Airbnb</h1>
                 <div className="mt-5">
